@@ -3,8 +3,8 @@ var mysql = require("mysql");
 var connection;
 
 
-if(process.env.nwdehmlow){
-  connection = mysql.createConnection(process.env.nwdehmlow);
+if(process.env.burgers_db){
+  connection = mysql.createConnection(process.env.burgers_db);
 }
 else{
   connection = mysql.createConnection({
