@@ -3,15 +3,15 @@ var mysql = require("mysql");
 var connection;
 
 
-if(process.env.burgers_db){
-  connection = mysql.createConnection(process.env.burgers_db);
+if(process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
 }
 else{
   connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'n1234567', // Add your password
-    database : 'burgers_db' // Add your database
+    password : 'n1234567', 
+    database : 'burgers_db' 
   });
 }
 

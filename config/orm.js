@@ -13,14 +13,10 @@ connection.connect(function(err) {
 
 
 
-// Methods for MySQL commands
-
 var orm = {
 
-  // selectAll()
   selectAll: function(cb) {
 
-    // Run MySQL Query
     connection.query('SELECT * FROM burgers', function (err, result) {
       if (err) throw err;
       cb(result);
